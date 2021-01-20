@@ -70,6 +70,6 @@ sqlContext.sql("create table Air_drop_weapon select weapon_name, count(victim_na
 
 sqlContext.sql("create table Equivalent_to_Air_drop_weapon select weapon_name, count(victim_name) from death where weapon_name = 'Kar98k' or weapon_name = 'AKM' or weapon_name = 'M24' or weapon_name = 'UMP9' or Weapon_name = 'SCAR-L'  group by weapon_name")
 
-
+sc.stop()
 
 
