@@ -12,7 +12,7 @@ from pyspark.sql.session import SparkSession
 
 sc = SparkContext()
 
-spark = SparkSession()
+spark = SparkSession(sc)
 
 df = spark.read.parquet("s3://project-pubg/death_clean/death.parquet")
 
