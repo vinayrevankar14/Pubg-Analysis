@@ -1,3 +1,5 @@
+
+
 import pyspark
 
 from pyspark.sql.functions import *
@@ -8,9 +10,9 @@ from pyspark.sql import SQLContext
 
 from pyspark.sql.session import SparkSession
 
-sc = SparkContext("local")
+sc = SparkContext()
 
-spark = SparkSession(sc)
+spark = SparkSession()
 
 df = spark.read.parquet("s3://project-pubg/death_clean/death.parquet")
 
@@ -69,13 +71,5 @@ sqlContext.sql("create table Air_drop_weapon select weapon_name, count(victim_na
 sqlContext.sql("create table Equivalent_to_Air_drop_weapon select weapon_name, count(victim_name) from death where weapon_name = 'Kar98k' or weapon_name = 'AKM' or weapon_name = 'M24' or weapon_name = 'UMP9' or Weapon_name = 'SCAR-L'  group by weapon_name")
 
 
-#get file from s3
 
-hdfs dfs -get s3://project-pubg/script_pubg/pubg_project.py /home/hadoop/
-
-
-
-
-# reading the script
-spark-submit --conf spark.sql.catalogImplementation=hive pubg_project.py
 
