@@ -2,7 +2,7 @@
   "AWSTemplateFormatVersion": "2010-09-09",
   "Parameters" : {
     "InstanceType" : {
-	  "Default" : "m5.2xlarge",
+	  "Default" : "m5.xlarge",
       "Type" : "String"
     },
     "ReleaseLabel" : {
@@ -49,9 +49,6 @@
                     },
 					{
                         "Name": "Spark"
-                    },
-					{
-                        "Name": "Zeppelin"
                     },
 					{
                         "Name": "ZooKeeper"
