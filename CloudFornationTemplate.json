@@ -154,7 +154,7 @@
                         "cluster",
                         "--conf",
                         "spark.sql.catalogImplementation=hive",
-                        "s3://project-pubg/script_pubg/pubg_project_try1.py"
+                        "s3://project-pubg/script_pubg/Pubg_Hive_Table_Creator.py"
                     ],
                     "Jar": "command-runner.jar"  
                 },
